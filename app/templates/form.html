@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ZillowPrices</title>
+</head>
+
+<center>
+<h1 style= "position:absolute; TOP:15px; RIGHT:535px; border-radius: 5px;
+background: #f0f0f0; padding: 3px; width: 400px;
+height: 50px;line-height:150%;">Price changes over time</h1>
+</center>
+
+<body>
+<style>
+		body {background-color: #000000;
+		background-image: url("https://www.washingtonpost.com/r/2010-2019/WashingtonPost/2019/04/24/National-Enterprise/Graphics/2300-disasters-promo.jpg");
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: center;
+		margin-right: 200px;
+		background-size: 85%;
+		}
+</style>
+	<center><p style="position:absolute; TOP:0px; RIGHT:575px;color:#ffffff;">{{error_message}}</p>
+	<form action="/submit" style="position:absolute; TOP:100px; RIGHT:575px; border-radius: 5px; background: #f0f0f0; padding: 2px; width: 300px; height: 290px;line-height:150%;">
+	<h3>
+		<p><label for=zipcode>Zipcode</label><br><input type='number' name=zipcode style="width: 50px; height: 20px; background-color:gainsboro;"></p>
+		<p><button type="submit" style="width: 200px; height: 45px; font-size: 25px; color:#000000; background-color:#787878;">Submit</button></p>
+	</h3>
+	</form>
+	<h4 style="position:absolute; TOP:250px; RIGHT:575px; padding: 2px; width: 300px; height: 290px;line-height:150%;">
+		<button onclick="myFunctiona()">H. Matthew</button>
+		<button onclick="myFunctionb()">H. Irma</button>
+		<button onclick="myFunctionc()">H. Florence</button>
+
+		<p id="demo"></p>
+
+		<script>
+		function myFunctiona() {
+  	document.getElementById("demo").innerHTML = "7105, 19809, 17512, 44718, 2865";
+	}
+		function myFunctionb() {
+		document.getElementById("demo").innerHTML = "46055, 80498, 66227, 30513, 32428";
+}
+	function myFunctionc() {
+	document.getElementById("demo").innerHTML = "20678, 33016, 6820 , 1543, 97601";
+}
+		</script>
+	</h4>
+  </center>
+</body>
+
+<center>
+<h4 style= "position:absolute; BOTTOM:15px; LEFT:120px; color: #ffffff; border-radius: 5px; padding: 3px; width: 400px; height: 70px;line-height:150%;">Disclaimer: Image taken from "https://www.washingtonpost.com/graphics/2019/national/mapping-disasters/". This page shows natural disaster information, and the change in average house prices throughout time for multiple Zipcodes.</h4>
+</center>
+
+</html>

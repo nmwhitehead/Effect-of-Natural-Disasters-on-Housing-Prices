@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Your Prediction</title>
+</head>
+<body>
+	<style>
+			body {
+      background-image: url({{url}});
+      height: 100%;
+      background-repeat: no-repeat;
+			background-size: cover;
+			}
+
+	</style>
+
+  <img src= static/graph3.png STYLE="position:absolute; BOTTOM:30px; RIGHT:10px"; width=1000 height=700/>
+  <!--  <img src="{{ url_for('static', filename=graph3) }}"/> -->
+  <table border= "10px solid black" STYLE="position:absolute; TOP:55px; LEFT:10px; text-align: center; background-color: #ffffff; color: #1A237E" width=400 height=100 >
+  <tr>
+    <th>Zipcode</th>
+    <th>Largest (Month-to-Month) % Change in this zipcode's data</th>
+    <th>Date Time it occured</th>
+  </tr>
+  <tr>
+    <td>{{zipcode}}</td>
+    <td>{{pct}} %</td>
+    <td>{{date_pct}}</td>
+  </tr>
+</table>
+<div class=page STYLE="position:absolute; TOP:150px; LEFT:10px">
+  <h1>Natural Disasters Information</h1>
+  {{fema_table | safe}}
+  <h2>Descriptive Statistics</h2>
+  {{des_stats | safe}}
+</div>
+</body>
+</html>
